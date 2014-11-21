@@ -1,0 +1,4 @@
+#Google
+SUBSYSTEM=="usb", ATTRS{idVendor}=="18d1", MODE="0660"
+#MX4
+SUBSYSTEM=="usb", ATTRS{idVendor}=="2a45", MODE="0c02"
