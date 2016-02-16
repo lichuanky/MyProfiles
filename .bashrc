@@ -106,12 +106,13 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-PATH=~/tools/gradle/gradle/bin:~/android/android-sdk-linux/tools:~/android/android-sdk-linux/platform-tools:~/bin:/home/lichuan/android/android-ndk-r10d:$PATH
-
-export CATALINA_HOME=/home/lichuan/tools/apache-tomcat-6.0.44
+export ANDROID_NDK=/home/lichuan/android/android-ndk-r10e
+export ANDROID_SDK=/home/lichuan/android/android-sdk-linux
 export ANDROID_HOME=/home/lichuan/android/android-sdk-linux
-export NDK_HOME=/home/lichuan/android/android-ndk-r10d
-#export JAVA_HOME=/home/lichuan/android/jdk1.6.0_45
 export JAVA_HOME=/home/lichuan/android/jdk
-export PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$CATALINA_HOME/bin
 export CLASSPATH=.:$JAVA_HOME/lib:$JAVA_HOME/jre/lib
+
+export PATH=$PATH:\
+$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:\
+~/bin:~/tools/infer/infer/bin:~/tools/gradle/bin:\
+$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$CATALINA_HOME/bin
